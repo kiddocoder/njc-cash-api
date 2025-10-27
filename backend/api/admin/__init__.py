@@ -1,1 +1,1 @@
-from . import AccountAdmin, CustomerAdmin;
+from . import AccountAdmin, CustomerAdmin, ConversationAdmin, ChatMessageAdmin;
