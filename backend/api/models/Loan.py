@@ -19,6 +19,18 @@ class Loan(models.Model):
     amount = models.DecimalField(max_digits=10, decimal_places=2)
     interest_rate = models.DecimalField(max_digits=5, decimal_places=2)
 
+    status = models.CharField(
+        max_length=50,
+        default='PENDING',
+        choices=[
+            ('PENDING', 'Pending'),
+            ('APPROVED', 'Approved'),
+            ('REJECTED', 'Rejected'),
+            ('DISBURSED', 'Disbursed'),
+            ('CLOSED', 'Closed')
+        ]
+    )
+
     start_date = models.DateField()
     end_date = models.DateField()
 
