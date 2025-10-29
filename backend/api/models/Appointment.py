@@ -18,3 +18,7 @@ class Appointment(models.Model):
 
     def __str__(self):
         return self.pk 
+    class Meta:
+        db_table = 'appointments'
+        verbose_name = 'Appointment'
+        verbose_name_plural = 'Appointments'

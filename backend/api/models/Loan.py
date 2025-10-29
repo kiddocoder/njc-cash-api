@@ -39,3 +39,7 @@ class Loan(models.Model):
 
     def __str__(self):
         return f"Loan {self.pk} for {self.borrower}"
+    class Meta:
+        db_table = 'loans'
+        verbose_name = 'Loan'
+        verbose_name_plural = 'Loans'

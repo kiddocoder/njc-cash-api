@@ -16,8 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from . import routing
+
+admin.site.site_header = "NJ Cash Zone Admin"
+admin.site.site_title = "NJ Cash Zone Admin Portal"
+admin.site.index_title = "NJ Cash Zone Adminiastration Site"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('chat/', include('chat.urls')),
     path('api/', include('api.urls')),
+    path('ws/', include(routing.websocket_urlpatterns)),
 ]

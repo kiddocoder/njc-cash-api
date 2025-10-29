@@ -38,9 +38,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+
+    'chat',
     'api',
+    'channels',
     'rest_framework',
 ]
+
+ASGI_APPLICATION = 'backend.asgi.application'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -89,11 +94,11 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
        'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'njc_cash_zone_db',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'NAME': 'postgres',
+        'USER': 'postgres.mhclpjiopliamonfeudy',
+        'PASSWORD': 'S9AyXhS10gYQdmpx',
+        'HOST': 'aws-1-us-east-1.pooler.supabase.com',
+        'PORT': '6543',
     }
 }
 
