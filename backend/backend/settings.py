@@ -29,6 +29,9 @@ ALLOWED_HOSTS = [
     'njc-cash-api.onrender.com'
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://njc-cash-api.onrender.com",
+]
 
 # Application definition
 
