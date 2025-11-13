@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-#o*fi$)aj-##8%5=6!&8k%!ag&jel&^beb%vir#wa&4q*n86d)
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'njc-cash-api.onrender.com'
+    'njc-cash-api.onrender.com',
+    'localhost',
+    '127.0.0.1',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
@@ -106,6 +108,7 @@ DATABASES = {
         'PORT': '6543',
     }
 }
+
 
 
 # Password validation
