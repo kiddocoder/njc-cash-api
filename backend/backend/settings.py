@@ -76,6 +76,14 @@ REST_FRAMEWORK = {
     ],
 }
 
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}
 
 TEMPLATES = [
     {
@@ -101,11 +109,14 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
        'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres.mhclpjiopliamonfeudy',
-        'PASSWORD': 'S9AyXhS10gYQdmpx',
-        'HOST': 'aws-1-us-east-1.pooler.supabase.com',
-        'PORT': '6543',
+        'NAME': 'njc_cash_zone_db',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+         'OPTIONS': {
+            'options': '-c search_path=public'
+        },
     }
 }
 
